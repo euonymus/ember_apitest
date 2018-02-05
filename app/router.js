@@ -7,6 +7,10 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('cocktails', function() {
+    this.route('add');
+    this.route('edit', { path: "/edit/:id" });
+  });
 });
 
 export default Router;
